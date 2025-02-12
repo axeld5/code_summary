@@ -1,0 +1,23 @@
+The GitHub repository "Open R1" aims to reproduce and build upon the DeepSeek-R1 pipeline. It includes scripts and configurations for training, evaluating, and generating synthetic data for models. The project is licensed under the Apache License, Version 2.0, and uses various tools like `ruff`, `isort`, `flake8`, and `pytest` for code quality and testing.
+
+### Key Components:
+1. **LICENSE**: The repository is licensed under the Apache License, Version 2.0, which allows for free use, reproduction, and distribution under certain conditions.
+2. **Makefile**: Contains easy-to-run commands for style checking, quality checking, testing, and evaluating models. It supports data parallel and tensor parallel evaluations.
+3. **README.md**: Provides an overview, installation instructions, and guidelines for training and evaluating models. It includes steps for reproducing DeepSeek's evaluation results and generating data.
+4. **setup.cfg and setup.py**: Configuration files for setting up the project, including dependencies and extras for different use cases like training, evaluation, and development.
+5. **assets**: Includes a plan-of-attack image.
+6. **logs**: Details missing.
+7. **recipes**: Contains configuration files for different training and evaluation setups, such as DDP, Zero-2, and Zero-3.
+8. **scripts**: Includes scripts for generating reasoning completions and running benchmarks.
+9. **slurm**: SLURM scripts for evaluating, generating data, serving models, and training on a compute cluster.
+10. **src**: Contains the main code for training and evaluating models, including configurations, custom tasks, and utility functions.
+11. **tests**: Contains unit tests for reward functions used in evaluation.
+
+### Installation and Usage:
+- **Installation**: Requires Python 3.11, specific versions of libraries like `vLLM` and `PyTorch`, and setting up virtual environments.
+- **Training**: Supports supervised fine-tuning (SFT) and group relative policy optimization (GRPO) with configurations for different models and datasets.
+- **Evaluation**: Uses `lighteval` for evaluating models on various benchmarks like MATH-500 and GPQA Diamond.
+- **Data Generation**: Includes scripts for generating synthetic data using models like DeepSeek-R1.
+
+### Contributing:
+Contributions are welcome, and guidelines are provided in the README.

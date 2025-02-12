@@ -1,0 +1,4 @@
+gradio
+mistralai
+pathspec
+python_dotenv

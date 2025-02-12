@@ -1,0 +1,39 @@
+The repository for `smolagents` includes several key components and documentation to facilitate contributions and usage.
+
+### Code of Conduct
+The **Contributor Covenant Code of Conduct** outlines a pledge to ensure a harassment-free experience for everyone, regardless of various personal characteristics. It specifies standards for positive behavior and unacceptable behavior, along with enforcement responsibilities and guidelines for corrective actions.
+
+### Contributing Guidelines
+The **CONTRIBUTING.md** file welcomes contributions in various forms, including code fixes, bug reports, feature requests, and documentation improvements. It provides guidelines for submitting issues and feature requests, as well as instructions for becoming a project maintainer.
+
+### Dockerfiles
+- **Dockerfile**: Sets up a Python environment with necessary build dependencies and installs the project using a requirements file. It exposes a port and runs a server script.
+- **e2b.Dockerfile**: Uses a custom base image and installs the `smolagents` package from a GitHub repository.
+
+### Configuration Files
+- **e2b.toml**: Configures an E2B sandbox template with team ID, start command, Dockerfile, and template ID.
+- **pyproject.toml**: Specifies build system requirements, project metadata, dependencies, and optional dependencies for various features like quality checks, testing, and development. It also includes configuration for `pytest`, `ruff` (code linter), and package data.
+
+### License
+The **LICENSE** file provides the Apache License, Version 2.0, outlining the terms and conditions for use, reproduction, and distribution of the software.
+
+### Makefile
+The **Makefile** includes targets for checking code quality, formatting code, running tests, and generating documentation.
+
+### README
+The **README.md** file introduces `smolagents` as a library for running powerful agents with simplicity and first-class support for code agents. It highlights features like Hub integrations, model-agnostic support, and tool-agnostic capabilities. The file includes quick demo instructions, command line interface usage, and contributions guidelines.
+
+### Subfolder 'docs'
+The documentation folder provides instructions for generating and previewing documentation, including installation steps, adding new elements to the navigation bar, and writing documentation in the Google documentation style.
+
+### Subfolder 'examples'
+This folder contains various scripts and notebooks for creating and evaluating language model agents using different inference types and tools, such as benchmarking, using E2B executors, and setting up retriever-augmented generation systems.
+
+### Subfolder 'src'
+The source folder houses the Python framework for building agents, including agent classes, prompt templates, utilities for parsing, error handling, tool execution, memory, logging, and workflow management.
+
+### Subfolder 'tests'
+The tests folder includes a collection of test scripts and configurations for various agents, tools, and utilities. It covers functionalities like running tasks, handling images, code errors, and checking final answer outputs.
+
+### Subfolder 'utils'
+The utils folder contains a script, `check_tests_in_ci.py`, which verifies that all test files are listed in the CI workflow file, ensuring comprehensive test coverage.
