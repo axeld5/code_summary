@@ -7,7 +7,26 @@ import pathspec
 EXCLUDED_DIRS = {'.git', '.svn', '__pycache__', 'pycache'}
 EXCLUDED_FILES = {'.env'}
 # Additional forbidden extensions – note these files will be included by name only.
-EXCLUDED_EXTENSIONS = {'.yaml', '.yml', '.xlsx', '.docx', '.pptx', '.json', '.csv', '.png', '.jpeg', '.txt'}
+EXCLUDED_EXTENSIONS = {
+    '.yaml', 
+    '.yml', 
+    '.xlsx', 
+    '.docx', 
+    '.pptx', 
+    '.json', 
+    '.csv', 
+    '.png', 
+    '.jpeg', 
+    '.txt', 
+    '.wav', 
+    '.mp3', 
+    '.mp4', 
+    '.lock', 
+    '.ptl',
+    '.h5',
+    '.pdf',
+    '.pickle'
+}
 
 # Mapping file extensions to language tags for code blocks.
 LANGUAGE_TAGS = {

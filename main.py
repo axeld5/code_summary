@@ -66,7 +66,11 @@ def main():
         temp_dir = os.path.join(tempfile.gettempdir(), repo_name)
         print(f"Cloning repository {args.path_or_url} into {temp_dir}")
         try:
-            subprocess.run(["git", "clone", args.path_or_url, temp_dir], check=True)
+            if os.path.exists(temp_dir):
+                subprocess.run(["git", "reset", "--hard"], cwd=temp_dir, check=True)
+                subprocess.run(["git", "pull", "origin", "main"], cwd=temp_dir, check=True)
+            else:
+                subprocess.run(["git", "clone", args.path_or_url, temp_dir], check=True)
         except subprocess.CalledProcessError as e:
             print(f"Error cloning repository: {e}")
             shutil.rmtree(temp_dir, onerror=remove_readonly)

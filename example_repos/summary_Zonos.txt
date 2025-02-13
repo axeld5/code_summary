@@ -1,0 +1,19 @@
+The GitHub repository contains a text-to-speech model called Zonos-v0.1, which is trained on over 200,000 hours of multilingual speech data. The model supports highly natural speech generation and accurate speech cloning using speaker embeddings or audio prefixes. It allows fine control over various parameters such as speaking rate, pitch variation, audio quality, and emotions.
+
+Key features include:
+- Zero-shot TTS with voice cloning.
+- Multilingual support for English, Japanese, Chinese, French, and German.
+- Control over audio quality, emotions, and other parameters.
+- Fast performance with a real-time factor of ~2x on an RTX 4090.
+- A Gradio WebUI for easy interaction.
+- Simple installation and deployment using Docker.
+
+The repository includes:
+- A detailed README with usage instructions and installation steps.
+- A `CONDITIONING_README.md` describing various conditionings the model accepts.
+- A `Dockerfile` and `docker-compose.yml` for containerization.
+- A Gradio interface script (`gradio_interface.py`) for generating audio.
+- Dependency management using `pyproject.toml`.
+- Example scripts and assets for demonstration.
+
+The model uses eSpeak for text normalization and phonemization, followed by DAC token prediction through a transformer or hybrid backbone. The architecture supports various conditioning inputs and allows for classifier-free guidance and CUDA graph capturing for optimization.
