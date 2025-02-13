@@ -1,9 +1,13 @@
 ---
-title: code_summary
+title: repository_summarium
 app_file: app.py
 sdk: gradio
 sdk_version: 5.16.0
 ---
+# Overview
+
+This repo allows to generate summaries of code architecture from local folders or other github repository. 
+
 # Project Setup & Usage
 
 ## Prerequisites
