@@ -1,6 +1,6 @@
 The repository contains scripts and tools for summarizing the contents of a local folder or a GitHub repository. The key components include:
 
-1. **`documentation_gradio.py`**: Provides a Gradio-based interface for loading and viewing saved summaries and summary trees. It includes functions to list and load saved summaries, and to interact with summary trees.
+1. **`app.py`**: Provides a Gradio-based interface for loading and viewing saved summaries and summary trees. It includes functions to list and load saved summaries, and to interact with summary trees.
 
 2. **`main.py`**: The main script that processes and summarizes a local folder or a GitHub repository. It handles command-line arguments, clones repositories, builds folder trees, generates summaries, and saves the results.
 

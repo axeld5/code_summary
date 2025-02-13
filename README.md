@@ -1,6 +1,6 @@
 ---
 title: code_summary
-app_file: documentation_gradio.py
+app_file: app.py
 sdk: gradio
 sdk_version: 5.16.0
 ---
@@ -26,7 +26,7 @@ python main.py --mode <local|repo> --path_or_url <folder_path|github_url>
 ## Viewing Summaries in a Readable Format
 To display the summaries in a user-friendly format, launch the Gradio interface using:
 ```bash
-python documentation_gradio.py --gradio
+python app.py --gradio
 ```
 This will start a Gradio web interface for easy viewing of file summaries.
 
@@ -38,7 +38,7 @@ For any issues or contributions, feel free to open an issue or submit a pull req
 
 The repository contains scripts and tools for summarizing the contents of a local folder or a GitHub repository. The key components include:
 
-1. **`documentation_gradio.py`**: Provides a Gradio-based interface for loading and viewing saved summaries and summary trees. It includes functions to list and load saved summaries, and to interact with summary trees.
+1. **`app.py`**: Provides a Gradio-based interface for loading and viewing saved summaries and summary trees. It includes functions to list and load saved summaries, and to interact with summary trees.
 
 2. **`main.py`**: The main script that processes and summarizes a local folder or a GitHub repository. It handles command-line arguments, clones repositories, builds folder trees, generates summaries, and saves the results.
 

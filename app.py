@@ -91,4 +91,4 @@ if "--gradio" in sys.argv:
                 node_dropdown.change(fn=lambda key, state: get_node_summary(key, state),
                                     inputs=[node_dropdown, tree_state],
                                     outputs=node_summary_output)
-    demo.launch(share=True)
+    demo.launch()
