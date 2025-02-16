@@ -5,6 +5,7 @@ import tempfile
 import stat
 import shutil
 import argparse
+import zipfile
 
 from functions.folder_tree import FolderNode, build_folder_tree, flatten_tree
 from functions.files_exclusion import load_gitignore
@@ -53,6 +54,11 @@ def main():
     args = parser.parse_args()
 
     if args.mode == 'local':
+        if args.path_or_url.endswith(".zip"):
+            with zipfile.ZipFile(args.path_or_url, 'r') as zip_ref:
+                path_split = args.path_or_url.split(".zip")[0]
+                zip_ref.extractall(path_split)
+                args.path_or_url = path_split
         repo_name = get_repo_or_folder_name(args.path_or_url, 'local')
         repo_root = os.path.abspath(args.path_or_url)
         if not os.path.exists(repo_root) or not os.path.isdir(repo_root):
